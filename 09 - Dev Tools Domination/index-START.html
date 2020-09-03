@@ -18,29 +18,57 @@
     }
 
     // Regular
-
+    console.log('yo')
     // Interpolated
+    console.log(`backticks op${dogs}`)
 
     // Styled
-
+    // console.log('%c yup', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
     // warning!
-
+    console.warn('careful of that')
     // Error :|
-
+    console.error('this is not working')
     // Info
-
+    console.info('this has x')
     // Testing
-
+    
+    console.assert(1 === 2, "does it ?")
     // clearing
-
+    console.clear();
     // Viewing DOM Elements
+    const p = document.querySelector('p');
 
+    console.log(p);
+    console.dir(p);
+    console.clear();
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
     // counting
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
 
     // timing
-
+    console.time('calculating');
+    console.log(2+2);
+    console.timeEnd('calculating');
+    // table   
+    console.table(dogs);
   </script>
 </body>
 </html>
